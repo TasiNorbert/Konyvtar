@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33516.290
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Konyvtar.Client", "Konyvtar\Client\Konyvtar.Client.csproj", "{BD840B01-A700-436B-8B1F-90E663ABE6D0}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Konyvtar.WEBAPI", "Konyvtar.WEBAPI\Konyvtar.WEBAPI.csproj", "{D95B4094-AF7C-44C9-9B34-24C888EAB440}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Konyvtar.Konyvtaros", "Konyvtar.Konyvtaros\Konyvtar.Konyvtaros.csproj", "{79A22174-0FF3-4F86-8856-5F66BB74ADA4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Konyvtar.Client", "Konyvtar.Client\Konyvtar.Client.csproj", "{15155963-74AF-40E6-B4E2-42707CBAEB97}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,10 +15,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{BD840B01-A700-436B-8B1F-90E663ABE6D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BD840B01-A700-436B-8B1F-90E663ABE6D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BD840B01-A700-436B-8B1F-90E663ABE6D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BD840B01-A700-436B-8B1F-90E663ABE6D0}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D95B4094-AF7C-44C9-9B34-24C888EAB440}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D95B4094-AF7C-44C9-9B34-24C888EAB440}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D95B4094-AF7C-44C9-9B34-24C888EAB440}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -27,6 +23,10 @@ Global
 		{79A22174-0FF3-4F86-8856-5F66BB74ADA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{79A22174-0FF3-4F86-8856-5F66BB74ADA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{79A22174-0FF3-4F86-8856-5F66BB74ADA4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{15155963-74AF-40E6-B4E2-42707CBAEB97}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15155963-74AF-40E6-B4E2-42707CBAEB97}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15155963-74AF-40E6-B4E2-42707CBAEB97}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15155963-74AF-40E6-B4E2-42707CBAEB97}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
