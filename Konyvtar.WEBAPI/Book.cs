@@ -25,11 +25,6 @@ namespace Konyvtar.WEBAPI
             
             public DateTime? DateOfReturn { get; set; }
 
-            public override string ToString()
-            {
-                return $"{Author}: {Title}";
-            }
-
         }
     
 }
