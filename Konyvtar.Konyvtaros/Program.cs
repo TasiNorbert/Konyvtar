@@ -1,4 +1,4 @@
-using Konyvtar.Konyvtaros;
+using KonyvtarLibrarian;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 

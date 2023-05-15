@@ -8,7 +8,7 @@
     }
   },
   "profiles": {
-    "Konyvtar.Client": {
+    "KonyvtarClient": {
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,
