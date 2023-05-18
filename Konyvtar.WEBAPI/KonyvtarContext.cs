@@ -12,5 +12,9 @@ namespace Konyvtar.WEBAPI
 
 
         public virtual DbSet<Book> Books { get; set; }
+
+        public virtual DbSet<Borrowed> Borroweds { get; set; }
+
+        public virtual DbSet<Members> Members { get; set; }
     }
 }
