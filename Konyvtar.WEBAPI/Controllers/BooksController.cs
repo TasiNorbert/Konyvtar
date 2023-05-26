@@ -7,21 +7,30 @@ using Konyvtar.WEBAPI.Repositories;
 
 namespace Konyvtar.WEBAPI.Controllers
 {
+
+    
     [ApiController]
     [Route("book")]
-    public class BookController : Controller
+    public class BooksController : Controller
     {
+        private readonly KonyvtarContext _konyvtarcontext;
+    public BooksController(KonyvtarContext konyvtarContext)
+    {
+            _konyvtarcontext = konyvtarContext;
+    }
+    
+        
         [HttpGet]
-        public ActionResult<IEnumerable<Book>> Get()
+        public async Task< ActionResult<IEnumerable<Book>>> GetAll ()
         {
-            var books = BookRepository.GetBooks();
+            var books = await _konyvtarcontext.Books.ToListAsync();
             return Ok(books);
         }
 
         [HttpGet("{id}")]
-        public ActionResult<Book> Get(long id)
+        public async Task<ActionResult<Book>> Get(long id)
         {
-            var book = BookRepository.GetBook(id);
+            var book = await _konyvtarcontext.Books.FindAsync(id);
 
             if (book != null)
             {
@@ -32,20 +41,22 @@ namespace Konyvtar.WEBAPI.Controllers
         }
 
         [HttpPost]
-        public ActionResult Post(Book book)
+        public async Task<ActionResult> Post(Book book)
         {
-            BookRepository.AddBook(book);
+            _konyvtarcontext.Books.Add(book);
+            await _konyvtarcontext.SaveChangesAsync();
             return Ok();
         }   
             
         [HttpPut("{id}")]
-        public ActionResult Put([FromBody] Book book, long id)
+        public async Task< ActionResult> Put([FromBody] Book book, long id)
         {
-            var bookToUpdate = BookRepository.GetBook(id);
+            var bookToUpdate = _konyvtarcontext.Books.FindAsync(id);
 
             if (bookToUpdate != null)
             {
-                BookRepository.UpdateBook(book);
+                _konyvtarcontext.Books.Update(book);
+                await _konyvtarcontext.SaveChangesAsync();
                 return Ok();
             }
 
@@ -53,13 +64,14 @@ namespace Konyvtar.WEBAPI.Controllers
         }
 
         [HttpDelete("{id}")]
-        public ActionResult Delete(long id)
+        public async Task<ActionResult> Delete(long id)
         {
-            var bookToDelete = BookRepository.GetBook(id);
+            var bookToDelete = await _konyvtarcontext.Books.FindAsync(id);
 
             if (bookToDelete != null)
             {
-                BookRepository.DeleteBook(bookToDelete);
+                _konyvtarcontext.Books.Remove(bookToDelete);
+                await _konyvtarcontext.SaveChangesAsync();
                 return Ok();
             }
 

@@ -1,3 +1,4 @@
+using Konyvtar.WEBAPI.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -19,7 +20,7 @@ namespace Konyvtar.WEBAPI
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddCors();
-
+            services.AddDbContext<KonyvtarContext>();
             services.AddControllers();
         }
 
