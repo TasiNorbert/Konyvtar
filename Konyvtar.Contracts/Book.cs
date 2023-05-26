@@ -19,12 +19,14 @@ namespace Konyvtar.Contracts
         [Required]
         public bool IsBorrowed { get; set; }
 
+        [MemberNameValidation]
         public string? NameOfBorrower { get; set; }
 
         public DateTime DateOfBorrowing { get; set; }
 
 
         public DateTime DateOfReturn { get; set; }
+
 
     }
 

@@ -12,7 +12,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Konyvtar.Client", "Konyvtar
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Konyvtar.Contracts", "Konyvtar.Contracts\Konyvtar.Contracts.csproj", "{0E092ED5-CCD8-4961-8047-4DAE6C0F14E1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Konyvtar.Librarian", "Konyvtar.Librarian\Konyvtar.Librarian.csproj", "{7DA52960-1097-459F-AA3E-D3142F2FDE05}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Konyvtar.Librarian", "Konyvtar.Librarian\Konyvtar.Librarian.csproj", "{7DA52960-1097-459F-AA3E-D3142F2FDE05}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
