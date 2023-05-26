@@ -19,7 +19,10 @@ else
             <tr>
                 <th>Title</th>
                 <th>Author</th>
-                <th>Rental Status</th>
+                <th>Publisher</th>
+                <th>Accession Number</th>
+                <th>Publisher</th>
+                <th>Year Of Publication</th>
             </tr>
         </thead>
         <tbody>
@@ -28,6 +31,9 @@ else
                 <tr>
                     <td>@book.Title</td>
                     <td>@book.Author</td>
+                    <td>@book.Publisher</td>
+                    <td>@book.AccessionNumber</td>
+                    <td>@book.YearOfPublication</td>
                     @if (book.IsBorrowed)
                     {
                         <td>Borrowed</td>

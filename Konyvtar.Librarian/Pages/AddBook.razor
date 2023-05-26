@@ -15,5 +15,24 @@
         <ValidationMessage For="() => Book.Author" />
     </div>
 
+    <div class="form-group row">
+        <label for="publisher" class="col-sm-3">Publisher:</label>
+        <InputText id="publisher" class="form-control col-sm-8" @bind-Value="@Book.Publisher" placeholder="Enter publisher"></InputText>
+        <ValidationMessage For="() => Book.Publisher" />
+    </div>
+
+    <div class="form-group row">
+        <label for="AccessionNumber" class="col-sm-3">AccessionNumber:</label>
+        <InputNumber id="AccessionNumber" class="form-control col-sm-8" @bind-Value="@Book.AccessionNumber" placeholder="Enter accession number"></InputNumber>
+        <ValidationMessage For="() => Book.AccessionNumber" />
+    </div>
+
+    <div class="form-group row">
+        <label for="YearOfPublication" class="col-sm-3">YearOfPublication:</label>
+        <InputNumber id="YearOfPublication" class="form-control col-sm-8" @bind-Value="@Book.YearOfPublication" placeholder="Enter year of publication"></InputNumber>
+        <ValidationMessage For="() => Book.YearOfPublication" />
+    </div>
+
+
     <button type="submit" class="btn btn-primary">Add</button>
 </EditForm>

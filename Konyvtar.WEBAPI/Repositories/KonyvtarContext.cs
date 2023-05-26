@@ -25,6 +25,6 @@ namespace Konyvtar.WEBAPI.Repositories
 
         public virtual DbSet<Borrowed>? Borroweds { get; set; }
 
-         public virtual DbSet<Members>? Members { get; set; }
+         public virtual DbSet<Member>? Members { get; set; }
     }
 }
