@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Konyvtar.WEBAPI;
 using Konyvtar.WEBAPI.Repositories;
+using Konyvtar.Contracts;
 
 namespace Konyvtar.WEBAPI.Controllers
 {
@@ -23,7 +24,7 @@ namespace Konyvtar.WEBAPI.Controllers
 
         // GET: api/Members
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Members>>> GetMembers()
+        public async Task<ActionResult<IEnumerable<Member>>> GetMembers()
         {
           if (_context.Members == null)
           {
@@ -34,7 +35,7 @@ namespace Konyvtar.WEBAPI.Controllers
 
         // GET: api/Members/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Members>> GetMembers(int id)
+        public async Task<ActionResult<Member>> GetMembers(int id)
         {
           if (_context.Members == null)
           {
@@ -53,7 +54,7 @@ namespace Konyvtar.WEBAPI.Controllers
         // PUT: api/Members/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutMembers(int id, Members members)
+        public async Task<IActionResult> PutMembers(int id, Member members)
         {
             if (id != members.MemberID)
             {
@@ -84,7 +85,7 @@ namespace Konyvtar.WEBAPI.Controllers
         // POST: api/Members
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<Members>> PostMembers(Members members)
+        public async Task<ActionResult<Member>> PostMembers(Member members)
         {
           if (_context.Members == null)
           {

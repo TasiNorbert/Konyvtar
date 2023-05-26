@@ -6,7 +6,7 @@ namespace Konyvtar.Contracts
         [Key]
         public int MemberID { get; set; }
 
-        [MemberNameValidation]
+        //[MemberNameValidation]
         public string MemberName { get; set; }
 
         [Required]

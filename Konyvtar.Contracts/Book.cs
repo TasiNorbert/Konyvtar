@@ -18,8 +18,6 @@ namespace Konyvtar.Contracts
         public int? YearOfPublication { get; set; }
         [Required]
         public bool IsBorrowed { get; set; }
-
-        [MemberNameValidation]
         public string? NameOfBorrower { get; set; }
 
         public DateTime DateOfBorrowing { get; set; }
