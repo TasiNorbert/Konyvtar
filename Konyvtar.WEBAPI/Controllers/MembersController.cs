@@ -11,7 +11,7 @@ using Konyvtar.Contracts;
 
 namespace Konyvtar.WEBAPI.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("member")]
     [ApiController]
     public class MembersController : ControllerBase
     {

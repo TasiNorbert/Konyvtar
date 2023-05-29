@@ -1,0 +1,25 @@
+﻿@page "/addmembers"
+@using Konyvtar.Contracts
+
+<EditForm Model="@Member" OnValidSubmit="@SubmitForm">
+    <DataAnnotationsValidator />
+    <div class="form-group row">
+        <label for="name" class="col-sm-3">Name:</label>
+        <InputText id="name" class="form-control col-sm-8" @bind-Value="@Member.MemberName" placeholder="Enter Name"></InputText>
+        <ValidationMessage For="() => Member.MemberName" />
+    </div>
+
+    <div class="form-group row">
+        <label for="address" class="col-sm-3">Address:</label>
+        <InputText id="address" class="form-control col-sm-8" @bind-Value="@Member.Address" placeholder="Enter Address"></InputText>
+        <ValidationMessage For="() => Member.Address" />
+    </div>
+    
+    <div class="form-group row">
+        <label for="BirthDate" class="col-sm-3">BirthDate:</label>
+        <InputDate id="BirthDate" class="form-control col-sm-8" @bind-Value="@Member.BirthDate" placeholder="Enter BithDate"></InputDate>
+        <ValidationMessage For="() => Member.BirthDate" />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Add</button>
+</EditForm>

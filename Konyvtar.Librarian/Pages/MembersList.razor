@@ -1,0 +1,43 @@
+﻿@page "/members"
+
+<h1>Members</h1>
+<br />
+@if (Members == null)
+{
+    <LoadingAnimation />
+}
+else
+{
+    <div class="form-group row">
+        <label for="name" class="col-sm-3">Search a member: </label>
+        <input id="name" class="form-control col-sm-8" @bind-value="SearchText" @bind-value:event="oninput" placeholder="Search member by name or address"></input>
+    </div>
+
+    <table class="table">
+        <thead>
+            <tr>
+                  <th>MemberID</th>
+                <th>MemberName</th>
+                <th>Address</th>
+                <th>BirthDate</th>
+                 <th>BorrowedBooks</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var member in Members)
+            {
+                <tr>
+                    <td>@member.MemberID</td>
+                    <td>@member.MemberName</td>
+                    <td>@member.Address</td>
+                    <td>@member.BirthDate</td>  
+                   @*<td>@title</td>*@
+                    
+                     
+                  
+                </tr>
+            }
+        </tbody>
+    </table>
+}
