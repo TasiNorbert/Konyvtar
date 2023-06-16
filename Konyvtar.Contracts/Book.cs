@@ -22,7 +22,7 @@ namespace Konyvtar.Contracts
 
         public DateTime DateOfBorrowing { get; set; }
 
-
+        //[ReturnDateValidation]
         public DateTime DateOfReturn { get; set; }
 
 
